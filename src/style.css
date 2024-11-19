@@ -1,6 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --night: #03120E;
+  --eerie-black: #1A1D1A;
+  --dark-green: #1E433D;
+  --charcoal: #3E505B;
+  --light-green: #71ECDD;
+  --beige: #a0a0a0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:"Jost", "Inter", Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
+  background-color: var(--eerie-black);
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  padding: 20px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--light-green);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.background-pattern2{
+  z-index: -1;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px 0;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.service-tag {
+  color: white;
+  margin-bottom: 20px;
+  background-color: var(--dark-green);
+  width: max-content;
+  padding: 4px 15px;
+  border-radius: 30px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-text {
+  color: var(--beige);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.sign-up-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--dark-green);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Features Section */
+.background-pattern1{
+  z-index: -10;
+  position: absolute;
+  width: 45%;
+  left: 0px;
+  top: 60%;
+}
+
+
+.features {
+  padding: 60px 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.features-header {
+  margin-bottom: 40px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding-top: 40px;
+  padding-right: 30%;
+
+  h2{
+    font-size: 2rem;
+    padding-bottom: 10%;
   }
-  
+  p{
+
+  }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: rgba(61, 213, 176, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.feature-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.feature-text {
+  color: var(--beige);
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cta {
+  background-color: var(--light-green);
+  border-radius: 15px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.cta h2 {
+  color: var(--night);
+  font-size: 32px;
+}
+
+.demo-btn {
+  background-color: var(--eerie-black);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(61, 213, 176, 0.1);
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-info {
+  max-width: 400px;
+}
+
+.footer-info p {
+  color: var(--beige);
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.contact-info {
+  color: var(--beige);
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: var(--light-green);
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: var(--beige);
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
