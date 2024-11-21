@@ -1,69 +1,134 @@
-<head><script defer src="main.js"></script></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve 'C:\Users\PC\Desktop\repos\studio-website\src\template.html' in 'C:\Users\PC\Desktop\repos\studio-website'
-  ModuleNotFoundError: Module not found: Error: Can't resolve 'C:\Users\PC\Desktop\repos\studio-website\src\template.html' in 'C:\Users\PC\Desktop\repos\studio-website'
-      at C:\Users\PC\Desktop\repos\studio-website\node_modules\webpack\lib\Compilation.js:2123:28
-      at C:\Users\PC\Desktop\repos\studio-website\node_modules\webpack\lib\NormalModuleFactory.js:923:13
-      at eval (eval at create (C:\Users\PC\Desktop\repos\studio-website\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
-      at C:\Users\PC\Desktop\repos\studio-website\node_modules\webpack\lib\NormalModuleFactory.js:339:22
-      at eval (eval at create (C:\Users\PC\Desktop\repos\studio-website\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
-      at C:\Users\PC\Desktop\repos\studio-website\node_modules\webpack\lib\NormalModuleFactory.js:520:22
-      at C:\Users\PC\Desktop\repos\studio-website\node_modules\webpack\lib\NormalModuleFactory.js:151:10
-      at C:\Users\PC\Desktop\repos\studio-website\node_modules\webpack\lib\NormalModuleFactory.js:783:25
-      at C:\Users\PC\Desktop\repos\studio-website\node_modules\webpack\lib\NormalModuleFactory.js:1008:8
-      at C:\Users\PC\Desktop\repos\studio-website\node_modules\webpack\lib\NormalModuleFactory.js:1137:5
-  
-  - Compilation.js:2123 
-    [studio-website]/[webpack]/lib/Compilation.js:2123:28
-  
-  - NormalModuleFactory.js:923 
-    [studio-website]/[webpack]/lib/NormalModuleFactory.js:923:13
-  
-  
-  - NormalModuleFactory.js:339 
-    [studio-website]/[webpack]/lib/NormalModuleFactory.js:339:22
-  
-  
-  - NormalModuleFactory.js:520 
-    [studio-website]/[webpack]/lib/NormalModuleFactory.js:520:22
-  
-  - NormalModuleFactory.js:151 
-    [studio-website]/[webpack]/lib/NormalModuleFactory.js:151:10
-  
-  - NormalModuleFactory.js:783 
-    [studio-website]/[webpack]/lib/NormalModuleFactory.js:783:25
-  
-  - NormalModuleFactory.js:1008 
-    [studio-website]/[webpack]/lib/NormalModuleFactory.js:1008:8
-  
-  - NormalModuleFactory.js:1137 
-    [studio-website]/[webpack]/lib/NormalModuleFactory.js:1137:5
-  
-  - child-compiler.js:211 
-    [studio-website]/[html-webpack-plugin]/lib/child-compiler.js:211:18
-  
-  - Compiler.js:629 finalCallback
-    [studio-website]/[webpack]/lib/Compiler.js:629:5
-  
-  - Compiler.js:664 
-    [studio-website]/[webpack]/lib/Compiler.js:664:11
-  
-  - Compiler.js:1350 
-    [studio-website]/[webpack]/lib/Compiler.js:1350:17
-  
-  
-  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [studio-website]/[tapable]/lib/Hook.js:18:14
-  
-  - Compiler.js:1346 
-    [studio-website]/[webpack]/lib/Compiler.js:1346:33
-  
-  - Compilation.js:2938 finalCallback
-    [studio-website]/[webpack]/lib/Compilation.js:2938:11
-  
-  - Compilation.js:3251 
-    [studio-website]/[webpack]/lib/Compilation.js:3251:11
-  
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Tech - Innovative Software Solutions</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.png">
+<script defer src="main.js"></script></head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./assets/logo.png" alt="Clean Tech Logo">
+                <span>Clean Tech</span>
+            </div>
+            <div class="nav-links">
+                <button id="home-btn" class="nav-btn active">Home</button>
+                <button id="projects-btn" class="nav-btn">Our Projects</button>
+                <button id="about-btn" class="nav-btn">About us</button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="content">
+        <!-- Content will be dynamically loaded here by JavaScript modules -->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="company-info">
+                <div class="footer-logo">
+                    <img src="assets/logo.svg" alt="Clean Tech Logo">
+                    <span>Clean Tech</span>
+                </div>
+                <p>We combine technical expertise with business insight to deliver scalable, future-ready software solutions that give your business a competitive edge.</p>
+            </div>
+
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><button class="footer-link" data-page="home">Home</button></li>
+                    <li><button class="footer-link" data-page="about">About Us</button></li>
+                    <li><button class="footer-link" data-page="portfolio">Portfolio</button></li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <h3>Have any questions?</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <img src="assets/phone-icon.svg" alt="Phone">
+                        <p>+91 9789531967</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/email-icon.svg" alt="Email">
+                        <p>cleantech@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <h3>Follow us on</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook">
+                        <img src="assets/facebook.svg" alt="Facebook">
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="social-icon twitter">
+                        <img src="assets/twitter.svg" alt="Twitter">
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="social-icon linkedin">
+                        <img src="assets/linkedin.svg" alt="LinkedIn">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <img src="assets/instagram.svg" alt="Instagram">
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-nav">
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <p class="copyright">&copy; 2024 Clean Tech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for demo booking -->
+    <div id="demo-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Schedule a Demo</h2>
+            <form id="demo-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Schedule Demo</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+</body>
+</html>
