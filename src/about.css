@@ -1,0 +1,157 @@
+:root {
+  --primary-color: #00BFA6;
+  --dark-bg: #1E293B;
+  --light-text: #FFFFFF;
+  --card-bg: #F8FAFC;
+  --heading-color: #333333;
+  --subheading-color: #555555;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #F8F8F8;
+}
+
+/* About Section */
+.about {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  color: var(--heading-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.team-intro {
+  font-size: 1.2rem;
+  color: var(--subheading-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.team-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Space between cards */
+  padding: 1rem;
+}
+
+/* Team Card: Shared Base Styles */
+.team-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 2rem;
+  gap: 1.5rem; /* Space between image and text */
+}
+
+.team-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.team-card img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0; /* Ensures image does not shrink */
+}
+
+/* Member Info */
+.member-info {
+  flex: 1; /* Takes up remaining space */
+}
+
+.member-info h3 {
+  font-size: 1.5rem;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.member-info .role {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.member-info p {
+  font-size: 1rem;
+  color: var(--subheading-color);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Social Links */
+.connect h4 {
+  font-size: 1rem;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  transform: scale(1.05);
+}
+
+/* Alternating Layout */
+.team-card:nth-child(odd) {
+  flex-direction: row; /* Image on the left, text on the right */
+}
+
+.team-card:nth-child(even) {
+  flex-direction: row-reverse; /* Image on the right, text on the left */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-card {
+      flex-direction: column; /* Stack image and text vertically */
+      align-items: center;
+  }
+
+  .team-card img {
+      margin-bottom: 1rem;
+  }
+
+  .member-info {
+      text-align: center;
+  }
+}
